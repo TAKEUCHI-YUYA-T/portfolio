@@ -1,0 +1,375 @@
+/* -------------------- */
+/* base
+/* -------------------- */
+body{
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+}
+li{
+  list-style:none;
+}
+a{
+    text-decoration: none;
+    color:#fff;
+}
+img{
+  width:100%;
+  vertical-align: bottom;
+}
+
+/* -------------------- */
+/* header
+/* -------------------- */
+.header{
+    background-color: #1B1310;
+    color: #fff;
+    height:74px;
+    padding: 0 70%;
+    border-bottom:1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+.nav-list{
+    /* navの横並び */
+    display: flex;
+    margin-left: 60px;
+}
+.nav-item{
+    /* メニューの右側に余白 */
+    margin-right: 30px;
+}
+.burger-btn{
+  display: none;
+}
+
+/* ------------------ */
+/* fv
+/* ------------------ */
+.fv{
+  height:90vh;
+  background-color: hsl(120, 360%, 20%);
+  /*background-image: url();*/
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-copy{
+   animation-name:fadeUpAnime;
+   animation-duration:1.0s;
+   animation-fill-mode:forwards;
+   opacity:0;
+   display: inline-block;
+   font-size: 50px;
+   color: #fff;
+   font-weight: bold;
+   border:2px solid #fff;
+   padding: 34px 42px;
+   z-index: 5;
+}
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+/* ------------------ */
+/* body共通
+/* ------------------ */
+h3{
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height:2;
+  letter-spacing: 0.1em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.section-wrapper{
+  padding:50px 10% 50px; 
+  
+}
+
+/* ------------------ */
+/* About
+/* ------------------ */
+.about{
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+.about-theme{
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height:2;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+/* ------------------ */
+/* Works
+/* ------------------ */
+.works {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+.video-container {
+  width: 100%; /* 親要素の幅に対して100%に設定 */
+  max-width: 560px; /* 最大幅を設定 */
+  margin: 0 auto; /* 左右に余白を持たせて中央揃え */
+}
+.video-container iframe,
+.video-container iframe.active {
+  width: 100%;
+  max-height: 200%;
+}
+.bottun{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+}
+#prev {
+	background: url(../img/navi_allow_bk_left.png) no-repeat;
+	text-decoration: none;
+	font-style: normal;
+	}
+#next {
+	background: url(../img/navi_allow_bk_right.png) no-repeat;
+	text-decoration: none;
+	font-style: normal;
+}
+#prev:hover {
+	background: url(../img/navi_allow_wh_left_on.png) no-repeat;
+	text-decoration: none;
+	font-style: normal;
+	}
+#next:hover {
+	background: url(../img/navi_allow_wh_right_on.png) no-repeat;
+	text-decoration: none;
+	font-style: normal;
+}
+#prev,
+#next,
+h4 {
+  display: flex;
+  display: inline-block; /* インラインブロック要素に設定 */
+  vertical-align: middle; /* 垂直方向の中央寄せ */
+  margin: 20px;
+  margin-top: 0px;
+}
+.video-bottun{
+
+  margin: 10px;
+  text-align: center;
+}
+.portfolio_link{
+  color: hsl(120, 360%, 20%);
+  text-decoration: underline;
+}
+
+/* ------------------ */
+/* Contact
+/* ------------------ */
+.contact{
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+.mail_link{
+  color: hsl(120, 360%, 20%);
+  text-decoration: underline;
+}
+
+@media screen and (max-width:768px){
+  /* ----------------------- */
+  /* base_sp
+  /* ----------------------- */
+  /* デフォルトのbuttonスタイルをリセット */
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    vertical-align: middle;
+  }
+
+  /* ------------------ */
+  /* nav-item */
+  /* ------------------ */
+  /* 以下、ヘッダーのナビアイテム */
+  .nav-item{
+    /* メニューの右側に余白 */
+    margin-right: 16px;
+  }
+
+  /* ------------------ */
+  /* humberger-menu */
+  /* ------------------ */
+  /* 以下、ハンバーガーボタン */
+  .burger-btn{
+    display: block;      
+    width: 140px;      
+    height: 40px;      
+    position: relative;      
+    z-index: 3;
+    border:none;    
+  }
+  .bar{      
+    width: 20px;      
+    height: 1px;        
+    display: block;      
+    position: absolute;      
+    left: 50%;      
+    transform: translateX(-50%);      
+    background-color: #fff;    
+  }
+  .bar_top{   
+    top: 10px;
+  }
+  .bar_mid{    
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .bar_bottom{
+    bottom: 10px;
+  }  
+  .burger-btn.close .bar_top{      
+    transform: translate(-50%,10px) rotate(45deg);      
+    transition: transform .3s;    
+  }    
+  .burger-btn.close .bar_mid{      
+    opacity: 0;
+    transition: opacity .3s;    
+  }    
+  .burger-btn.close .bar_bottom{      
+    transform: translate(-50%,-8px) rotate(-45deg);      
+    transition: transform .3s;    
+  }
+  .noscroll{
+    overflow: hidden;
+  }
+
+  /* 以下、ハンバーガーメニュー */
+  .nav-wrapper{      
+    visibility: hidden;
+    opacity: 0;
+    width: 100vw;      
+    height: 100vh;      
+    position: fixed;      
+    top: 0;      
+    left: 0;
+    transition: all .5s;       
+    z-index: 2;     
+  }     
+  .header-nav{        
+    width: 100%;        
+    height: 100%;        
+    background-color:#1B1310;
+    opacity: 0.9;
+    z-index: 2;
+  }     
+  .nav-list{        
+    display: block;        
+    position: absolute;        
+    top: 50%;        
+    left: 50%;        
+    transform: translate(-50%,-50%);        
+    text-align: center;
+    margin: auto;
+  }      
+  .nav-item{        
+    margin-right: 0;        
+    margin-bottom: 40px;
+  }
+
+/* メニューオープン時 */
+  .nav-wrapper.fade {
+	  visibility: visible;
+	  opacity: 1;
+  }
+
+  /* ------------------ */
+  /* fv */
+  /* ------------------ */
+  .main-copy{
+    font-size: 30px;
+  }
+  
+  /* ------------------ */
+  /* body共通(SP)
+  /* ------------------ */
+  h3{
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+  }
+  .section-wrapper{
+      padding:50px 5% 50px;  
+  }
+
+  /* ------------------ */
+  /* About
+  /* ------------------ */
+  .about{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+  }
+  .about-theme{
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height:2;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+  }
+    
+  /* ------------------ */
+  /* Works
+  /* ------------------ */
+  .works {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+  }
+  .video-container,.video-container iframe,.video-container iframe.active {
+    width: 100%; /* Active width */
+    height: 100%; /* Active height */
+    scroll-snap-align: center; /* 中央に来るよう調整 */
+  }
+  .prev-next-buttons {
+    text-align: center;
+    margin-top: 10px; /* Adjust the margin as needed */
+  }
+  
+  .prev-next-buttons button {
+    margin: 0 10px; /* Adjust the horizontal margin as needed */
+  }
+}  

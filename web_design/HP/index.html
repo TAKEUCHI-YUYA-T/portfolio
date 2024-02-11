@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOP - Y.TAKEUCHI</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="img/favicon.ico">
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="./js/script.js"></script>
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script> -->
+</head>
+<body>
+  <!-- header -->
+  <header class="header">   
+      <!-- ナビゲーションメニュー -->
+      <div class="nav-wrapper">
+        <nav class="header-nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#about">About</a></li>
+            <li class="nav-item"><a href="#works">Works</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- ナビゲーションメニュー -->
+      <!-- ハンバーガーボタン -->
+      <button class="burger-btn">
+        <span class="bar bar_top"></span>
+        <span class="bar bar_mid"></span>
+        <span class="bar bar_bottom"></span>
+      </button>
+      <!-- ハンバーガーボタン -->
+  </header>
+  <!-- //header -->
+
+
+
+    <main>
+      <!-- fv -->
+      <div class="fv" id="top">
+        <p class="main-copy">Y.TAKEUCHI</p>
+      </div>
+      <!-- //fv -->
+
+      <!-- About -->
+      <section class="section-wrapper" id="about">
+        <h2 class="about">About</h2>
+          <h3 class="about-theme">タケウチ　ユウヤ</h3>
+          <div class="text_contact table-wrapper">
+            <TABLE width="100%">
+              <TR> 
+                <TD ALIGN="LEFT">生年月日<br>
+                  <br></TD>
+                <TD ALIGN="LEFT">1995年12月12日 <br>
+                <br></TD>
+              </TR>
+              <TR> 
+                <TD ALIGN="LEFT">血液型<br>
+                  <br></TD>
+                <TD ALIGN="LEFT">不明<br>
+                <br></TD>
+              </TR>
+              <TR> 
+                <TD ALIGN="LEFT">出身地<br>
+                  <br></TD>
+                <TD ALIGN="LEFT">神奈川県淵野辺市<br>
+                <br></TD>
+              </TR>
+              <TR> 
+                <TD ALIGN="LEFT">学歴<br>
+                <br></TD>
+                <TD ALIGN="LEFT">中央大学経済学部 国際経済学科卒業<br>
+                <br></TD>
+              </TR>
+              <TR>
+                <TD ALIGN="LEFT">趣味<br>
+                <br></TD>
+                <TD ALIGN="LEFT">テニス、筋トレ、読書、落語鑑賞<br>
+                <br></TD>
+              </TR>
+            </TABLE>
+          </div>
+      </section>
+      <!-- //About -->
+
+      <!-- Works -->
+      <section class="section-wrapper" id="works">
+        <h2 class="works">Works</h2>
+        <h3 class="works-theme">TENNIS</h3>
+        <p class="text_works">テニスをしています。</p>
+        <div class="video-container">
+            <iframe class="video-iframe active" style="display: block;" src="https://www.youtube.com/embed/jILmnjOjOfw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe class="video-iframe" style="display: none;" src="https://www.youtube.com/embed/ja3lZuuxeEQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe class="video-iframe" style="display: none;" src="https://www.youtube.com/embed/Vpq-MIjr-l0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe class="video-iframe" style="display: none;" src="https://www.youtube.com/embed/k61z7cZ-o2A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="video-bottun">
+          <buttun class="bottun" id="prev" onclick="changeVideo('prev')"></buttun>
+          <h4>Video</h4>
+          <buttun class="bottun" id="next" onclick="changeVideo('next')"></buttun>
+        </div>
+        <a class="portfolio_link" href="https://www.youtube.com/@Y.TAKEUCHI" target="_blank">→watch more…</a>
+
+        <h3 class="works-theme">DEVELOPMENTS</h3>
+        <div class="text_works">
+          <p>開発もしています。</p>
+          <a class="portfolio_link" href="https://github.com/TAKEUCHI-YUYA-T/portfolio" target="_blank">→see GitHub…</a>
+        </div>
+      </section>
+      <!-- //Works -->
+
+      <!-- Contact -->
+      <section class="section-wrapper" id="contact">
+        <h2 class="contact">Contact</h2>
+          <h3 class="contact"></h3>
+          <div class="text_contact">
+            <p>ご連絡はこちらから。</p>
+            <p>Eメールアドレス : <span><a class="mail_link" href="mailto:takeuchi.yuya.2019@outlook.com?Subject=HPお問い合わせ">takeuchi.yuya.2019@outlook.com </a></span></p>
+          </div>
+      </section>
+      <!-- //Contact -->  
+    </main>
+    <script>
+      // 初期状態では最初のiframeが表示される
+      let currentIframeIndex = 0;
+    
+      function changeVideo(direction) {
+        const iframes = document.querySelectorAll('.video-iframe');
+        iframes[currentIframeIndex].style.display = 'none';
+    
+        if (direction === 'next') {
+          currentIframeIndex = (currentIframeIndex + 1) % iframes.length;
+        } else if (direction === 'prev') {
+          currentIframeIndex = (currentIframeIndex - 1 + iframes.length) % iframes.length;
+        }
+    
+        iframes[currentIframeIndex].style.display = 'block';
+      }
+    </script>
+</body>
+</html>
+
+ 
